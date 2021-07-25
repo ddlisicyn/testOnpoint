@@ -1,0 +1,273 @@
+@import url("https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: fixed;
+    overflow: hidden;
+    font-family: 'Gilroy';
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 3072px;
+    height: 768px;
+    background-image: url(../img/background.png);
+    background-size: cover;
+}
+
+.main__header {
+    position: absolute;
+    top: 3.5%;
+    left: 2.5%;
+}
+
+.main__header img {
+    width: 160px;
+    height: 26px;
+}
+
+.main__first-slide, .main__second-slide, .main__third-slide {
+    width: 1024px;
+    height: 768px;
+}
+
+.main__footer {
+    position: absolute;
+    bottom: 2%;
+    left: 2.5%;
+}
+.main__footer img {
+    width: 70px;
+    height: 16px;
+}
+
+.first-slide__descripton {
+    margin: 14% 5% 2.5% 7%;
+    text-transform: uppercase;
+}
+
+.first-slide__descripton p {
+    font-size: 32px;
+}
+
+.first-slide__descripton p:nth-of-type(2) {
+    font-size: 110px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    line-height: 110px;
+}
+
+.first-slide__descripton span {
+    font-weight: 700;
+}
+
+.first-slide__descripton-with-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 850px;
+}
+
+.first-slide__descripton-with-button p {
+    font-size: 110px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    line-height: 110px;
+    z-index: 1;
+}
+
+.first-slide__button {
+    width: 290px;
+    height: 80px;
+    background: #ff6a9f;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.first-slide__button-arrow {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.3), 3px 3px 5px rgba(255, 255, 255, 0.6);
+}
+
+.first-slide__button-arrow div {
+    position: relative;
+    top: 24px;
+    width: 18px;
+    height: 2px;
+    background-color: white;
+    left: 16px;
+    display: block;
+}
+
+.first-slide__button-arrow div::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    top: -3px;
+    right: -2px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.first-slide__button-arrow div::before {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    top: 3px;
+    right: -2px;
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(-45deg);
+}
+
+.first-slide__button p {
+    font-size: 24px;
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+#sperm-bottom {
+    width: 29%;
+    height: 17%;
+    margin-top: 30px;
+}
+
+#bacteria-near-sperm {
+    width: 60px;
+    height: 55px;
+    position: absolute;
+    bottom: 30%;
+    left: 1%;
+    animation-duration: 10s;
+    animation-name: bacteriaNearSpermMovement; 
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+#bacteria-bottom {
+    width: 220px;
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+    animation-duration: 10s;
+    animation-name: bacteriaBottomMovement; 
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1.5,1,.2,-.5);
+}
+
+#bacteria-blurred-bottom {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 9%;
+    left: 12%;
+}
+
+#flat-bacteria-top {
+    position: absolute;
+    width: 110px;
+    height: 75px;
+    top: 9%;
+    left: 0;
+}
+
+#virus-middle {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: 24.5%;
+    left: 28.5%;
+    animation-duration: 20s;
+    animation-name: virusMovement; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#sperm-middle {
+    position: absolute;
+    width: 570px;
+    height: 80px;
+    top: 20%;
+    left: 14.5%;
+}
+
+#bacteria-top {
+    position: absolute;
+    width: 60px;
+    height: 55px;
+    top: 7.5%;
+    left: 25%;
+    animation-duration: 12s;
+    animation-name: bacteriaTopMovement; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#bacteria-blurred-top {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 4%;
+    left: 31%;
+}
+
+#main-sperm {
+    position: absolute;
+    width: 1100px;
+    height: 500px;
+    top: 20%;
+    left: 47%;
+}
+
+@keyframes virusMovement {
+    0% {top: 24.5%; left: 28.5%; transform:rotate(0deg);}
+    10% {top: 25.5%; left: 27%; transform:rotate(36deg);}
+    20% {top: 24.5%; left: 26%; transform:rotate(72deg);}
+    30% {top: 24.5%; left: 25%; transform:rotate(108deg);}
+    40% {top: 24%; left: 25.5%; transform:rotate(144deg);}
+    50% {top: 24.5%; left: 25%; transform:rotate(180deg);}
+    60% {top: 23.5%; left: 26%; transform:rotate(216deg);}
+    70% {top: 24.5%; left: 27%; transform:rotate(252deg);}
+    80% {top: 25.5%; left: 28%; transform:rotate(288deg);}
+    90% {top: 25.5%; left: 28.5%; transform:rotate(324deg);}
+    100% {top: 24.5%; left: 28.5%; transform:rotate(360deg);}
+}
+
+@keyframes bacteriaBottomMovement {
+    0% {width: 220px; left: 18%;}
+    40% {width: 320px; left: 16%;}
+    75% {width: 260px; left: 17%;}
+    100% {width: 220px; left: 18%;}
+}
+
+@keyframes bacteriaNearSpermMovement {
+    0%{bottom: 30%; left: 1%;}
+    25%{bottom: 33%; left: 0.5%;}
+    50%{bottom: 30%; left: 1%;}
+    75%{bottom: 26%; left: 1.5%;}
+    100%{bottom: 30%; left: 1%;}
+}
+
+@keyframes bacteriaTopMovement {
+    0%{top: 7.5%;left: 25%; width: 60px; height: 55px;}
+    25%{top: 8.5%;left: 27%; width: 60px; height: 55px;}
+    50%{top: 9%;left: 26%; width: 70px; height: 65px;}
+    75%{top: 8.5%;left: 25.5%; width: 60px; height: 55px;}
+    100%{top: 7.5%;left: 25%;}
+}
