@@ -1,4 +1,31 @@
 @import url("https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css");
+@font-face {
+    font-family: 'DIN Pro';
+    src: local('DIN Pro Light'), local('DIN-Pro-Light'),
+        url('DINPro-Light.woff2') format('woff2'),
+        url('DINPro-Light.woff') format('woff'),
+        url('DINPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+font-family: 'DIN Pro Regular';
+src: url('DINPro-Regular.eot');
+src: url('DINPro-Regular.eot') format('embedded-opentype'),
+url('DINPro-Regular.woff') format('woff'),
+url('DINPro-Regular.ttf') format('truetype');
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+    font-family: 'DIN Pro Bold';
+    src: url('DINPro-Bold.eot');
+    src: url('DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('DINPro-Bold.woff') format('woff'),
+    url('DINPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -51,8 +78,9 @@ body {
     text-transform: uppercase;
 }
 
-.first-slide__descripton p {
-    font-size: 32px;
+.first-slide__descripton p:first-child {
+    font-size: 30px;
+    font-family: 'DIN Pro';
 }
 
 .first-slide__descripton p:nth-of-type(2) {
@@ -74,7 +102,7 @@ body {
     width: 850px;
 }
 
-.first-slide__descripton-with-button p {
+.first-slide__descripton-with-button p:first-child {
     font-size: 110px;
     font-weight: 300;
     letter-spacing: 5px;
@@ -135,7 +163,7 @@ body {
     transform: rotate(-45deg);
 }
 
-.first-slide__button p {
+.first-slide__button > p {
     font-size: 24px;
     text-transform: none;
     font-weight: 400;
@@ -231,8 +259,162 @@ body {
     position: absolute;
     width: 1100px;
     height: 500px;
-    top: 20%;
-    left: 47%;
+    top: 13.5%;
+    left: 45%;
+    animation-duration: 2s;
+    transform: translate3d(50px, 50px, 0);
+}
+
+#after-main-sperm {
+    position: absolute;
+    width: 800px;
+    height: 350px;
+    top: 13.5%;
+    left: 51.5%;
+    animation-duration: 3s;
+    transform: translate3d(50px, 50px, 0);
+}
+
+#sperm-top {
+    position: absolute;
+    width: 500px;
+    height: 225px;
+    top: 10.5%;
+    left: 56%;
+    animation-duration: 4s;
+    transform: translate3d(50px, 50px, 0);
+}
+
+#sperm-blurred-middle {
+    position: absolute;
+    width: 800px;
+    height: 350px;
+    top: 55%;
+    left: 61.5%;
+    animation-duration: 3.5s;
+    transform: translate3d(50px, 50px, 0);
+}
+
+#sperm-blurred-bottom {
+    position: absolute;
+    width: 275px;
+    height: 145px;
+    top: 68%;
+    left: 61.5%;
+    animation-duration: 4.5s;
+    transform: translate3d(50px, 50px, 0);
+}
+
+.second-slide__description {
+    margin: 13% 0 0 7.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-slide__description-title {
+    font-size: 30px;
+    font-family: 'DIN Pro';
+    text-transform: uppercase;
+}
+
+.second-slide__description-text {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.second-slide__description-scroller {
+    margin-top: 10px;
+}
+
+.description-scroller__scroll img {
+    width: 20px;
+    height: 90px;
+    position: absolute;
+}
+
+.description-scroller__scroll-line {
+    width: 5px;
+    height: 360px;
+    background: black;
+    border-radius: 2.5px;
+    margin: 45px 8px;
+}
+
+.second-slide__description-information {
+    width: 700px;
+    height: 350px;
+    margin-left: 25px;
+    background: white;
+    z-index: 1;
+    box-shadow: -2px 5px 12px -2px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 25px 30px 30px 30px;
+    border-bottom: 20px solid rgba(255, 255, 255, 0.6);
+}
+
+.second-slide__description-information p {
+    font-family: 'DIN Pro Regular';
+    font-size: 22px;
+}
+
+.second-slide__description-information span {
+    font-family: 'DIN Pro Bold';
+}
+
+#bottle {
+    position: absolute;
+    width: 220px;
+    height: 680px;
+    bottom: 0;
+    left: 68.5%;
+    z-index: 2;
+}
+
+.third-slide__title {
+    margin: 150px 0 0 325px;
+}
+
+.third-slide__title p {
+    font-family: 'DIN Pro Regular';
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.third-slide__title h1 {
+    margin-left: -4px;
+    font-size: 88px;
+    font-weight: 400;
+    letter-spacing: 7px;
+}
+
+.third-slide__title span {
+    font-weight: 700;
+}
+
+.third-slide__information {
+    display: flex;
+    flex-direction: row;
+    margin: 75px 0 0 200px;
+}
+
+.information__first-item {
+    width: 425px;
+    height: 250px;
+    background: white;
+    z-index: 1;
+    border-radius: 40px;
+    box-shadow: -2px 5px 12px -2px rgba(0, 0, 0, 0.2);
+}
+
+.information__second-item {
+    margin: 20px 0 0 50px;
+    width: 250px;
+    height: 135px;
+    background: white;
+    border-radius: 40px;
+    box-shadow: -2px 5px 12px -2px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes virusMovement {
@@ -270,4 +452,9 @@ body {
     50%{top: 9%;left: 26%; width: 70px; height: 65px;}
     75%{top: 8.5%;left: 25.5%; width: 60px; height: 55px;}
     100%{top: 7.5%;left: 25%;}
+}
+
+@keyframes fade {
+    0% {opacity: 0.1;}
+    100% {opacity: 1; transform: translate3d(15px, 15px, 0);}
 }
