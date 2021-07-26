@@ -1,18 +1,18 @@
 const firstSlideButton = document.querySelector('.first-slide__button'),
-      main = document.querySelector('.main'),
-      header = document.querySelector('.main__header'),
-      footer = document.querySelector('.main__footer'),
+      main = document.querySelector('main'),
+      header = document.querySelector('header'),
+      footer = document.querySelector('footer'),
       sperms = document.querySelectorAll('.second-slide__sperms img'),
-      scrollerButton = document.querySelector('.description-scroller__scroll'),
+      scrollerButton = document.querySelector('.second-slide__scroll'),
       secondSlideText = document.querySelector('.second-slide__description-information p'),
       modalButton = document.querySelector('.third-slide__button'),
-      modal = document.querySelector('.third-slide__modal'),
+      modal = document.querySelector('.modal'),
       modalCloseButton = document.querySelector('.modal__close-button'),
-      prevText = document.querySelector('.slider-nav__prev-slide'),
-      nextText = document.querySelector('.slider-nav__next-slide'),
-      circles = document.querySelectorAll('.slider-nav__circle'),
-      sliderText = document.querySelectorAll('.slider-text__item'),
-      modalTitle = document.querySelector('.third-slide__modal-title');
+      prevText = document.querySelector('.modal__prev-slide'),
+      nextText = document.querySelector('.modal__next-slide'),
+      circles = document.querySelectorAll('.modal__circle'),
+      sliderText = document.querySelectorAll('.modal__text-item'),
+      modalTitle = document.querySelector('.modal__title');
 
 let touchStartX = 0,
     touchPositionX = 0,
@@ -27,16 +27,12 @@ let touchStartX = 0,
 firstSlideButton.addEventListener('click', () => {
     x = -1024;
     nextSlide(x, main);
-    prevSlide(-x, header);
-    prevSlide(-x, footer);
     spermsRotation();
 });
 
 header.addEventListener('click', () => {
     x = 0;
     nextSlide(x, main);
-    prevSlide(-x, header);
-    prevSlide(-x, footer);
 })
 
 main.addEventListener('touchstart', function(e) {
@@ -72,14 +68,10 @@ function TouchEnd(e) {
     if (resultOfAction == 'Swipe Left' && x > -2048) {
         x -= 1024;
         nextSlide(x, main);
-        prevSlide(-x, header);
-        prevSlide(-x, footer);
         spermsRotation();
     } else if (resultOfAction == 'Swipe Right' && x != 0) {
         x += 1024;
         prevSlide(x, main);
-        nextSlide(-x, header);
-        nextSlide(-x, footer);
     }
 }
 
@@ -127,7 +119,7 @@ scrollerButton.addEventListener('touchmove', function(e) {
 
 
 function TouchMove2(e) {
-    const offsetTop = document.getElementsByClassName('description-scroller__scroll-line')[0].offsetTop,
+    const offsetTop = document.getElementsByClassName('second-slide__scroll-line')[0].offsetTop,
           offsetTopText = document.getElementsByClassName('second-slide__description-information')[0].getElementsByTagName('p')[0].offsetTop;     
     let diffScroller = e.changedTouches[0].clientY - offsetTop,
         diffText = (e.changedTouches[0].clientY - offsetTopText) / 1.5;
@@ -157,8 +149,8 @@ modal.addEventListener('click', (e) => {
 });
 
 function closeAndShowModal() {
-    modal.classList.toggle('hide');
-    modal.classList.toggle('show');
+    modal.classList.toggle('modal-hide');
+    modal.classList.toggle('modal-show');
     modalTitle.style = `animation-name: fade;
                    animation-duration: .5s;`;
 }

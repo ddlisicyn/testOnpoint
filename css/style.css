@@ -2,27 +2,27 @@
 @font-face {
     font-family: 'DIN Pro';
     src: local('DIN Pro Light'), local('DIN-Pro-Light'),
-        url('DINPro-Light.woff2') format('woff2'),
-        url('DINPro-Light.woff') format('woff'),
-        url('DINPro-Light.ttf') format('truetype');
+        url('fonts/DINPro-Light.woff2') format('woff2'),
+        url('fonts/DINPro-Light.woff') format('woff'),
+        url('fonts/DINPro-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
 font-family: 'DIN Pro Regular';
-src: url('DINPro-Regular.eot');
-src: url('DINPro-Regular.eot') format('embedded-opentype'),
-url('DINPro-Regular.woff') format('woff'),
-url('DINPro-Regular.ttf') format('truetype');
+src: url('fonts/DINPro-Regular.eot');
+src: url('fonts/DINPro-Regular.eot') format('embedded-opentype'),
+url('fonts/DINPro-Regular.woff') format('woff'),
+url('fonts/DINPro-Regular.ttf') format('truetype');
 font-weight: 400;
 font-style: normal;
 }
 @font-face {
     font-family: 'DIN Pro Bold';
-    src: url('DINPro-Bold.eot');
-    src: url('DINPro-Bold.eot?#iefix') format('embedded-opentype'),
-    url('DINPro-Bold.woff') format('woff'),
-    url('DINPro-Bold.ttf') format('truetype');
+    src: url('fonts/DINPro-Bold.eot');
+    src: url('fonts/DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/DINPro-Bold.woff') format('woff'),
+    url('fonts/DINPro-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -38,7 +38,7 @@ body {
     font-family: 'Gilroy';
 }
 
-.main {
+main {
     display: flex;
     flex-direction: row;
     width: 3072px;
@@ -47,30 +47,31 @@ body {
     background-size: cover;
 }
 
-.main__header {
+header {
     position: absolute;
     top: 3.5%;
     left: 2.5%;
+    z-index: 1;
 }
 
-.main__header img {
+header img {
     width: 160px;
-    height: 26px;
+    height: 26px;  
 }
 
-.main__first-slide, .main__second-slide, .main__third-slide {
+.first-slide, .second-slide, .third-slide {
     width: 1024px;
     height: 768px;
 }
 
-.main__footer {
+footer {
     position: absolute;
     bottom: 2%;
     left: 2.5%;
     z-index: 3;
 }
 
-.main__footer img {
+footer img {
     width: 70px;
     height: 16px;
 }
@@ -329,13 +330,13 @@ body {
     margin-top: 10px;
 }
 
-.description-scroller__scroll img {
+.second-slide__scroll img {
     width: 20px;
     height: 90px;
     position: absolute;
 }
 
-.description-scroller__scroll-line {
+.second-slide__scroll-line {
     width: 5px;
     height: 360px;
     background: black;
@@ -379,20 +380,20 @@ body {
     margin: 150px 0 0 310px;
 }
 
-.third-slide__title p, .third-slide__modal-title p {
+.third-slide__title p, .modal__title p {
     font-family: 'DIN Pro Regular';
     font-size: 26px;
     text-transform: uppercase;
 }
 
-.third-slide__title h1, .third-slide__modal-title h1 {
+.third-slide__title h1, .modal__title h1 {
     margin-left: -4px;
     font-size: 88px;
     font-weight: 400;
     letter-spacing: 10px;
 }
 
-.third-slide__title span, .third-slide__modal-title span {
+.third-slide__title span, .modal__title span {
     font-weight: 700;
 }
 
@@ -402,7 +403,7 @@ body {
     margin: 75px 0 0 200px;
 }
 
-.information__first-item {
+.third-slide__first-item {
     width: 425px;
     height: 265px;
     background: white;
@@ -411,19 +412,19 @@ body {
     box-shadow: -2px 5px 12px -2px rgba(0, 0, 0, 0.2);
 }
 
-.information__first-item img {
+.third-slide__first-item img {
     width: 65px;
     height: 60px;
     margin: -18px 0 10px 140px;
 }
 
-.information__first-item p {
+.third-slide__first-item p {
     margin: 0 55px 0 140px;
     font-family: 'DIN Pro Regular';
     font-size: 24px;
 }
 
-.information__second-item {
+.third-slide__second-item {
     margin: 15px 0 0 50px;
     width: 250px;
     height: 150px;
@@ -432,13 +433,13 @@ body {
     box-shadow: -2px 5px 12px -2px rgba(0, 0, 0, 0.2);
 }
 
-.information__second-item img {
+.third-slide__second-item img {
     width: 60px;
     height: 50px;
     margin: -22px 0 10px 35px;  
 }
 
-.information__second-item p {
+.third-slide__second-item p {
     margin: 0 35px;
     font-family: 'DIN Pro Regular';
     font-size: 24px;
@@ -455,7 +456,7 @@ body {
     margin: 40px 0 0 30px;  
 }
 
-.third-slide__button-plus {
+.third-slide__button-content {
     position: relative;
     width: 50px;
     height: 50px;
@@ -465,7 +466,7 @@ body {
     box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.3), 3px 3px 5px rgba(255, 255, 255, 0.6);
 }
 
-.third-slide__button-plus div {
+.third-slide__button-content div {
     width: 50px;
     height: 50px;
     display: flex;
@@ -473,7 +474,7 @@ body {
     align-items: center;
 }
 
-.third-slide__button-plus div:before{
+.third-slide__button-content div:before{
     content: "+";
     font-size: 30px;
     color: white;
@@ -484,7 +485,7 @@ body {
     font-family: 'DIN Pro Regular';
 }
 
-.third-slide__modal {
+.modal {
     width: 1024px;
     height: 768px;
     background: rgba(0, 0, 0, .3);
@@ -494,7 +495,7 @@ body {
     z-index: 1;
 }
 
-.third-slide__modal-information {
+.modal__information {
     width: 800px;
     height: 560px;
     background: white;
@@ -502,12 +503,12 @@ body {
     border-radius: 35px;
 }
 
-.third-slide__modal-title {
+.modal__title {
     margin: 0 0 40px 220px;
     padding-top: 50px;
 }
 
-.modal-title__top {
+.modal__title-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -520,8 +521,8 @@ body {
     margin: -18px 25px 0 0;
 }
 
-.modal__close-button .close-button__leftright, 
-.modal__close-button .close-button__rightleft  {
+.modal__close-button .modal__leftright, 
+.modal__close-button .modal__rightleft  {
     height: 4px;
     width: 50px;
     position: absolute;
@@ -530,11 +531,11 @@ body {
     border-radius: 2px;
 }
 
-.modal__close-button .close-button__leftright {
+.modal__close-button .modal__leftright {
     transform: rotate(45deg);
 }
 
-.modal__close-button .close-button__rightleft {
+.modal__close-button .modal__rightleft {
     transform: rotate(-45deg);
 }
 
@@ -557,7 +558,7 @@ body {
     font-size: 24px;
 }
 
-.slider-text__item {
+.modal__text-item {
     margin-bottom: 20px;
 }
 
@@ -567,8 +568,8 @@ body {
     flex-direction: row;
 }
 
-.slider-nav__prev-slide, 
-.slider-nav__next-slide {
+.modal__prev-slide, 
+.modal__next-slide {
     width: 8px;
     height: 8px;
     border-top: 2px solid black;
@@ -576,15 +577,15 @@ body {
     margin: 0 10px;
 }
 
-.slider-nav__next-slide {
+.modal__next-slide {
     transform: rotate(45deg);
 }
 
-.slider-nav__prev-slide {
+.modal__prev-slide {
     transform: rotate(-135deg);
 }
 
-.slider-nav__circle {
+.modal__circle {
     width: 8px;
     height: 8px;
     background: white;
@@ -593,16 +594,16 @@ body {
     margin: 0 5px;
 }
 
-.slider-nav__circle-active {
+.modal__circle-active {
     background: #fc6da9;
     border: 1px solid #fc6da9;
 }
 
-.hide {
+.modal-hide {
     display: none;
 }
 
-.show {
+.modal-show {
     display: block;
 }
 

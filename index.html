@@ -8,11 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="main">
-        <div class="main__header">
-            <img src="img/header.png" alt="header-logo">
-        </div>
-        <div class="main__first-slide">
+    <header>
+        <img src="img/header.png" alt="header-logo">
+    </header>
+    <main>
+        <div class="first-slide">
             <div class="first-slide__descripton"> 
                 <p>привет,</p><br>
                 <p>это <span>не</span>
@@ -29,17 +29,17 @@
                     </div>
                 </div>
             </div>
-            <img id="sperm-bottom" src="img/first-slide/first-slide-bottom-sperm.png" alt="pink-sperm">
+            <img id="sperm-bottom" src="img/first-slide/bottom-sperm.png" alt="pink-sperm">
             <img id="bacteria-near-sperm" src="img/first-slide/bacteria-near-sperm.png" alt="bacteria">
             <img id="bacteria-bottom" src="img/first-slide/bacteria-bottom.png" alt="bacteria">
             <img id="bacteria-blurred-bottom" src="img/first-slide/bacteria-blurred.png" alt="bacteria-blurred">
-            <img id="flat-bacteria-top" src="img/first-slide//flat-bacteria-top.png" alt="flat-bacteria">
+            <img id="flat-bacteria-top" src="img/first-slide/flat-bacteria-top.png" alt="flat-bacteria">
             <img id="virus-middle" src="img/first-slide/virus-middle.png" alt="virus">
             <img id="sperm-middle" src="img/first-slide/sperm-middle.png" alt="pink-sperm">
             <img id="bacteria-top" src="img/first-slide/bacteria-top.png" alt="bacteria-top">
             <img id="bacteria-blurred-top" src="img/first-slide/bacteria-blurred.png" alt="bacteria-blurred">
         </div>
-        <div class="main__second-slide">
+        <div class="second-slide">
             <div class="second-slide__sperms">
                 <img id="main-sperm" src="img/second-slide/main-sperm.png" alt="main-sperm">
                 <img id="after-main-sperm" src="img/second-slide/after-main-sperm.png" alt="after-main-sperm">
@@ -49,13 +49,13 @@
             </div>
             <div class="second-slide__description">
                 <p class="second-slide__description-title">текст<br>
-                   сообщения</p>
+                    сообщения</p>
                 <div class="second-slide__description-text">
                     <div class="second-slide__description-scroller">
-                        <div class="description-scroller__scroll">
+                        <div class="second-slide__scroll">
                             <img src="img/second-slide/scroll-btn.png" alt="scroll-button">
                         </div>
-                        <div class="description-scroller__scroll-line">
+                        <div class="second-slide__scroll-line">
                         </div>
                     </div>
                     <div class="second-slide__description-information">
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <div class="main__third-slide">
+        <div class="third-slide">
             <img id="bottle" src="img/third-slide/bottle.png" alt="bottle">
             <img id="blue-bubble-top" src="img/third-slide/blue-bubble.png" alt="blue-bubble">
             <img id="blue-bubble-near-top" src="img/third-slide/blue-bubble.png" alt="blue-bubble">
@@ -101,83 +101,83 @@
                 <h1>BREND<span>XY</span></h1>
             </div>
             <div class="third-slide__information">
-                <div class="information__first-item">
+                <div class="third-slide__first-item">
                     <img src="img/third-slide/plate.png" alt="plate">
                     <p>3 раза в день после еды. После приема препарата рекомен-
                         дуется воздержаться от пищи и напитков в течение 1 часа</p>
                 </div>
-                <div class="information__right-block">
-                    <div class="information__second-item">
+                <div>
+                    <div class="third-slide__second-item">
                         <img src="img/third-slide/calendar.png" alt="calendar">
                         <p>Курс лечения от 7 дней до 1 мес.</p>
                     </div>
                     <div class="third-slide__button">
                         <div>
-                            <div class="third-slide__button-plus">
+                            <div class="third-slide__button-content">
                                 <div></div>
                             </div>
                         </div>
                         <p>Подробнее</p>
                     </div>
                 </div>
-                <div class="third-slide__modal hide">
-                    <div class="third-slide__modal-information">
-                        <div class="third-slide__modal-title">
-                            <div class="modal-title__top">
-                                <p>преимущества</p>
-                                <div class="modal__close-button">
-                                    <div class="close-button__leftright"></div>
-                                    <div class="close-button__rightleft"></div>
-                                </div> 
-                            </div>
-                            <h1>BREND<span>XY</span></h1>
-                        </div>
-                        <div class="modal__slider-text">
-                            <div class="slider-text__item">
-                                <span>01</span>
-                                <p>Самое важное и ключевое преимущество
-                                    нашего препарата</p>
-                            </div>
-                            <div class="slider-text__item">
-                                <span>02</span>
-                                <p>Второе по важности преимущество</p>
-                            </div>
-                            <div class="slider-text__item">
-                                <span>03</span>
-                                <p>Ещё одно важное преимущество препарата</p>
-                            </div>
-                            <div class="slider-text__item">
-                                <span>04</span>
-                                <p>Ещё одно не менее важное преимущество
-                                    препарата</p>
-                            </div>
-                            <div class="slider-text__item">
-                                <span>05</span>
-                                <p>Ещё одно важное преимущество препарата</p>
-                            </div>
-                            <div class="slider-text__item">
-                                <span>06</span>
-                                <p>Ещё одно важное преимущество препарата</p>
-                            </div>
-                        </div>
-                        <div class="modal__slider-nav">
-                            <div class="slider-nav__prev-slide">
-                            </div>
-                            <div class="slider-nav__circle slider-nav__circle-active">
-                            </div>
-                            <div class="slider-nav__circle">
-                            </div>
-                            <div class="slider-nav__next-slide">
-                            </div>
-                        </div>
+            </div>
+        </div>
+        <div class="modal modal-hide">
+            <div class="modal__information">
+                <div class="modal__title">
+                    <div class="modal__title-top">
+                        <p>преимущества</p>
+                        <div class="modal__close-button">
+                            <div class="modal__leftright"></div>
+                            <div class="modal__rightleft"></div>
+                        </div> 
+                    </div>
+                    <h1>BREND<span>XY</span></h1>
+                </div>
+                <div class="modal__slider-text">
+                    <div class="modal__text-item">
+                        <span>01</span>
+                        <p>Самое важное и ключевое преимущество
+                            нашего препарата</p>
+                    </div>
+                    <div class="modal__text-item">
+                        <span>02</span>
+                        <p>Второе по важности преимущество</p>
+                    </div>
+                    <div class="modal__text-item">
+                        <span>03</span>
+                        <p>Ещё одно важное преимущество препарата</p>
+                    </div>
+                    <div class="modal__text-item">
+                        <span>04</span>
+                        <p>Ещё одно не менее важное преимущество
+                            препарата</p>
+                    </div>
+                    <div class="modal__text-item">
+                        <span>05</span>
+                        <p>Ещё одно важное преимущество препарата</p>
+                    </div>
+                    <div class="modal__text-item">
+                        <span>06</span>
+                        <p>Ещё одно важное преимущество препарата</p>
+                    </div>
+                </div>
+                <div class="modal__slider-nav">
+                    <div class="modal__prev-slide">
+                    </div>
+                    <div class="modal__circle modal__circle-active">
+                    </div>
+                    <div class="modal__circle">
+                    </div>
+                    <div class="modal__next-slide">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="main__footer">
-            <img src="img/footer.png" alt="footer-logo">
-        </div>
-    </div>
+    </main>
+    <footer>
+        <img src="img/footer.png" alt="footer-logo">
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
