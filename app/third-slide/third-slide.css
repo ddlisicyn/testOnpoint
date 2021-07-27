@@ -1,0 +1,279 @@
+#bottle {
+    position: absolute;
+    width: 220px;
+    height: 680px;
+    bottom: 0;
+    left: 68.5%;
+    z-index: 3;
+}
+
+.third-slide__title {
+    margin: 150px 0 0 310px;
+}
+
+.third-slide__title p, .modal__title p {
+    font-family: 'DIN Pro Regular';
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.third-slide__title h1, .modal__title h1 {
+    margin-left: -4px;
+    font-size: 88px;
+    font-weight: 400;
+    letter-spacing: 10px;
+}
+
+.third-slide__title span, .modal__title span {
+    font-weight: 700;
+}
+
+.third-slide__information {
+    display: flex;
+    flex-direction: row;
+    margin: 75px 0 0 200px;
+}
+
+.third-slide__first-item {
+    width: 425px;
+    height: 265px;
+    background: white;
+    z-index: 0;
+    border-radius: 40px;
+    box-shadow: -2px 5px 12px -2px rgba(0, 0, 0, 0.2);
+}
+
+.third-slide__first-item img {
+    width: 65px;
+    height: 60px;
+    margin: -18px 0 10px 140px;
+}
+
+.third-slide__first-item p {
+    margin: 0 55px 0 140px;
+    font-family: 'DIN Pro Regular';
+    font-size: 24px;
+}
+
+.third-slide__second-item {
+    margin: 15px 0 0 50px;
+    width: 250px;
+    height: 150px;
+    background: white;
+    border-radius: 40px;
+    box-shadow: -2px 5px 12px -2px rgba(0, 0, 0, 0.2);
+}
+
+.third-slide__second-item img {
+    width: 60px;
+    height: 50px;
+    margin: -22px 0 10px 35px;  
+}
+
+.third-slide__second-item p {
+    margin: 0 35px;
+    font-family: 'DIN Pro Regular';
+    font-size: 24px;
+}
+
+.third-slide__button {
+    width: 250px;
+    height: 75px;
+    background: #ff6a9f;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px 0 0 30px;  
+}
+
+.third-slide__button-content {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.3), 3px 3px 5px rgba(255, 255, 255, 0.6);
+}
+
+.third-slide__button-content div {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-slide__button-content div:before{
+    content: "+";
+    font-size: 30px;
+    color: white;
+}
+
+.third-slide__button p {
+    font-size: 25px;
+    font-family: 'DIN Pro Regular';
+}
+
+#blue-bubble-top {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 9.5%;
+    left: 73%;
+    animation-name: blueBubbleTopMovement;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+}
+
+#blue-bubble-near-top {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 20%;
+    left: 72.5%;
+    z-index: 3;
+    animation-name: blueBubbleNearTopMovement;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+#pink-bubble-top {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 29%;
+    left: 70.5%;
+    z-index: 1;
+    animation-name: pinkBubbleTopMovement;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+#pink-bubble-middle {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    opacity: .7;
+    z-index: 2;
+    top: 43%;
+    left: 73%;
+    animation-name: pinkBubbleMiddleMovement;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+#blue-bubble-middle {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 60%;
+    left: 68%;
+    z-index: 3;
+    animation-name: blueBubbleMiddleMovement;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#pink-bubble-bottom {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 75%;
+    left: 68%;
+    opacity: .6;
+    z-index: 3;
+    animation-name: pinkBubbleBottomMovement;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+#blue-bubble-near-bottom {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 78%;
+    left: 74.5%;
+    z-index: 2;
+    animation-name: blueBubbleNearButtom;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+#blue-bubble-bottom {
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    top: 92%;
+    left: 73%;
+    z-index: 3;
+    animation-name: blueBubbleButtomMovement;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s; 
+}
+
+@keyframes fade {
+    0% {opacity: 0.3;}
+    100% {opacity: 1;}
+}
+
+@keyframes blueBubbleTopMovement {
+    0% {transform: translate3d(0, 0, 0);}
+    25% {transform: translate3d(35px, 35px, 0);}
+    50% {transform: translate3d(0, 0, 0);}
+    75% {transform: translate3d(25px, 25px, 0);}
+    100% {transform: translate3d(0, 0, 0);}
+}
+
+@keyframes blueBubbleNearTopMovement {
+    0% {transform: translate3d(0, 0, 0);}
+    25% {transform: translate3d(25px, 25px, 0);}
+    50% {transform: translate3d(0, 0, 0);}
+    75% {transform: translate3d(25px, -20px, 0);}
+    100% {transform: translate3d(0, 0, 0);}
+}
+
+@keyframes pinkBubbleTopMovement {
+    0% {transform: translate3d(0, 0, 0);}
+    50% {transform: translate3d(-40px, -10px, 0);}
+    100% {transform: translate3d(0, 0, 0);}
+}
+
+@keyframes pinkBubbleMiddleMovement {
+    0% {transform: translate3d(0, 0, 0);}
+    50% {transform: translate3d(20px, -10px, 0); width: 130px; height: 130px;}
+    100% {transform: translate3d(0, 0, 0);}
+}
+
+@keyframes blueBubbleMiddleMovement {
+    0% {transform: translate3d(0, 0, 0);}
+    40% {transform: translate3d(-30px, 15px, 0);}
+    75% {transform: translate3d(15px, -10px, 0);}
+    100% {transform: translate3d(0, 0, 0);}
+}
+
+@keyframes pinkBubbleBottomMovement {
+    0% {transform: translate3d(0, 0, 0); width: 75px; height: 75px;}
+    25% {transform: translate3d(25px, 15px, 0); width: 90px; height: 90px;}
+    50% {transform: translate3d(15px, -25px, 0); width: 105px; height: 105px;}
+    75% {transform: translate3d(-5px, 45px, 0); width: 85px; height: 85px;}
+    100% {transform: translate3d(0, 0, 0); width: 75px; height: 75px;}
+}
+
+@keyframes blueBubbleNearButtom {
+    0% {transform: translate3d(0, 0, 0);}
+    50% {transform: translate3d(30px, -10px, 0);}
+    100% {transform: translate3d(0, 0, 0);}
+}
+
+@keyframes blueBubbleButtomMovement {
+    0% {transform: translate3d(0, 0, 0);}
+    50% {transform: translate3d(-40px, -25px, 0); width: 155px; height: 155px;}
+    100% {transform: translate3d(0, 0, 0);}
+}

@@ -1,0 +1,121 @@
+.modal {
+    width: 1024px;
+    height: 768px;
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    left: 2048px;
+    z-index: 1;
+}
+
+.modal__information {
+    width: 800px;
+    height: 560px;
+    background: white;
+    margin: 124px 68px 100px 150px;
+    border-radius: 35px;
+}
+
+.modal__title {
+    margin: 0 0 40px 220px;
+    padding-top: 50px;
+}
+
+.modal__title-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -15px;
+}
+
+.modal__close-button { 
+    height: 68px;
+    width: 50px;
+    margin: -18px 25px 0 0;
+}
+
+.modal__close-button .modal__leftright, 
+.modal__close-button .modal__rightleft  {
+    height: 4px;
+    width: 50px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: black;
+    border-radius: 2px;
+}
+
+.modal__close-button .modal__leftright {
+    transform: rotate(45deg);
+}
+
+.modal__close-button .modal__rightleft {
+    transform: rotate(-45deg);
+}
+
+.modal__slider-text {
+    width: 500px;
+    height: 250px;
+    margin: -20px 50px 0 225px;
+    overflow: hidden;
+}
+
+.modal__slider-text span {
+    color: #8cc9e8;
+    font-family: 'Gilroy';
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.modal__slider-text p {
+    font-family: 'DIN Pro Regular';
+    font-size: 24px;
+}
+
+.modal__text-item {
+    margin-bottom: 20px;
+}
+
+.modal__slider-nav {
+    margin: 40px 0 0 220px;
+    display: flex;
+    flex-direction: row;
+}
+
+.modal__prev-slide, 
+.modal__next-slide {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    margin: 0 10px;
+}
+
+.modal__next-slide {
+    transform: rotate(45deg);
+}
+
+.modal__prev-slide {
+    transform: rotate(-135deg);
+}
+
+.modal__circle {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.modal__circle-active {
+    background: #fc6da9;
+    border: 1px solid #fc6da9;
+}
+
+.modal-hide {
+    display: none;
+}
+
+.modal-show {
+    display: block;
+}
