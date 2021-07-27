@@ -1,4 +1,4 @@
-import closeAndShowModal from "../third-slide/third-slide";
+import closeAndShowModal from "./third-slide";
 
 const modal = document.querySelector('.modal'),
       modalCloseButton = document.querySelector('.modal__close-button'),
@@ -10,24 +10,24 @@ const modal = document.querySelector('.modal'),
 let positionOfText = 0;
 
 modalCloseButton.addEventListener('click', () => {
-closeAndShowModal();
+    closeAndShowModal();
 });
 
 modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-      closeAndShowModal();
-  }
+    if (e.target === modal) {
+        closeAndShowModal();
+    }
 });
 
 nextText.addEventListener('click', () => {
-  if (positionOfText == 0) {
+    if (positionOfText == 0) {
         positionOfText -= 260;
         textChanging();
     }
 });
 
 prevText.addEventListener('click', () => {
-  if (positionOfText == -260) {
+    if (positionOfText == -260) {
         positionOfText += 260;
         textChanging();
     }

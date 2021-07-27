@@ -1,10 +1,10 @@
-import modal from "../modal/modal";
+import modal from "./modal";
 
 const modalButton = document.querySelector('.third-slide__button'),
       modalTitle = document.querySelector('.modal__title');
 
 modalButton.addEventListener('click', () => {
-  closeAndShowModal();
+    closeAndShowModal();
 });
 
 function closeAndShowModal() {

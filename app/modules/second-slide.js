@@ -18,10 +18,10 @@ function spermsRotation() {
 }
 
 scrollerButton.addEventListener('touchmove', function(e) {
-    TouchMove2(e);
+    touchMoveScroller(e);
 });
 
-function TouchMove2(e) {
+function touchMoveScroller(e) {
     const offsetTop = document.getElementsByClassName('second-slide__scroll-line')[0].offsetTop,
           offsetTopText = document.getElementsByClassName('second-slide__description-information')[0].getElementsByTagName('p')[0].offsetTop,
           height = document.getElementsByClassName('second-slide__scroll-line')[0].clientHeight;

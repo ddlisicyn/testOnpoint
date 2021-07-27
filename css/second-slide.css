@@ -1,3 +1,8 @@
+.second-slide {
+    width: 1024px;
+    height: 768px;
+}
+
 .second-slide__description {
     margin: 13% 0 0 7.5%;
     display: flex;

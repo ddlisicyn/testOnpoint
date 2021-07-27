@@ -1,12 +1,11 @@
 import '../css/main.css';
-import './first-slide/first-slide.css';
-import './second-slide/second-slide.css';
-import './third-slide/third-slide.css';
-import './modal/modal.css';
-
-import spermsRotation from './second-slide/second-slide';
-import './modal/modal';
-import './third-slide/third-slide';
+import '../css/first-slide.css';
+import '../css/second-slide.css';
+import '../css/third-slide.css';
+import '../css/modal.css';
+import spermsRotation from './modules/second-slide';
+import './modules/modal';
+import './modules/third-slide';
 
 const header = document.querySelector('header'),
         main = document.querySelector('main'),
@@ -51,17 +50,17 @@ function touchMoveSwipe(e) {
 }
 
 function touchEndSwipe(e) {
-    let resultOfAction = CheckAction();
+    let resultOfAction = checkAction();
 
     if (touchStartX === e.changedTouches[0].clientX) {
-        return;
+      return;
     } else if (resultOfAction == 'Swipe Left' && positionOfMain > -width * 2/3) {
-        positionOfMain -= width / 3;
-        nextSlide();
-        spermsRotation();
+      positionOfMain -= width / 3;
+      nextSlide();
+      spermsRotation();
     } else if (resultOfAction == 'Swipe Right' && positionOfMain != 0) {
-        positionOfMain += width / 3;
-        nextSlide();
+      positionOfMain += width / 3;
+      nextSlide();
     }
 }
 
@@ -70,16 +69,16 @@ function nextSlide() {
                      transition: .5s;`;
 }
 
-function CheckAction() {
+function checkAction() {
     let diff = touchStartX - touchPositionX,
         msg = '';
 
     if(Math.abs(diff) > sensitivity) {
-        if (diff > 0) {
-        msg = "Swipe Left";
+      if (diff > 0) {
+      msg = "Swipe Left";
     } else {
-            msg = "Swipe Right";
-        }
+      msg = "Swipe Right";
+    }
     }
 
     return msg;
