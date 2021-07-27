@@ -1,6 +1,7 @@
 const sperms = document.querySelectorAll('.second-slide__sperms img'),
       scrollerButton = document.querySelector('.second-slide__scroll'),
       secondSlideText = document.querySelector('.second-slide__description-information p');
+      
 let trigger = 1;
 
 function spermsRotation() {
@@ -23,7 +24,8 @@ scrollerButton.addEventListener('touchmove', function(e) {
 function TouchMove2(e) {
     const offsetTop = document.getElementsByClassName('second-slide__scroll-line')[0].offsetTop,
           offsetTopText = document.getElementsByClassName('second-slide__description-information')[0].getElementsByTagName('p')[0].offsetTop,
-          height = document.getElementsByClassName('second-slide__scroll-line')[0].clientHeight;    
+          height = document.getElementsByClassName('second-slide__scroll-line')[0].clientHeight;
+
     let diffScroller = e.changedTouches[0].clientY - offsetTop,
         diffText = (e.changedTouches[0].clientY - offsetTopText) / 1.5;
 

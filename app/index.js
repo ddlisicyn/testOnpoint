@@ -33,9 +33,11 @@ firstSlideButton.addEventListener('click', () => {
 main.addEventListener('touchstart', function(e) {
   touchStartSwipe(e);
 });
+
 main.addEventListener('touchmove', function(e) {
   touchMoveSwipe(e);
 });
+
 main.addEventListener('touchend', function(e) {
   touchEndSwipe(e);
 });

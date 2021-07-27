@@ -7,59 +7,49 @@ const modal = document.querySelector('.modal'),
       circles = document.querySelectorAll('.modal__circle'),
       sliderText = document.querySelectorAll('.modal__text-item');
 
-    let y = 0;
+let positionOfText = 0;
 
 modalCloseButton.addEventListener('click', () => {
-closeAndShowModal()
-})
+closeAndShowModal();
+});
 
 modal.addEventListener('click', (e) => {
   if (e.target === modal) {
-      closeAndShowModal()
+      closeAndShowModal();
   }
 });
 
 nextText.addEventListener('click', () => {
-  if (y == 0) {
-      y -= 260;
-
-      sliderText.forEach(item => {
-          item.style = `transform: translateY(${y}px);`;
-          item.classList.toggle('fade');
-              setTimeout(() => {
-                  item.classList.toggle('fade');
-              }, 300);
-      })
-      circles.forEach(item => {
-          item.classList.toggle('modal__circle-active');
-          item.classList.toggle('fade');
-              setTimeout(() => {
-                  item.classList.toggle('fade');
-              }, 300);
-      });
-  }
-})
+  if (positionOfText == 0) {
+        positionOfText -= 260;
+        textChanging();
+    }
+});
 
 prevText.addEventListener('click', () => {
-  if (y == -260) {
-      y += 260;
+  if (positionOfText == -260) {
+        positionOfText += 260;
+        textChanging();
+    }
+});
 
-      sliderText.forEach(item => {
-          item.style = `transform: translateY(${y}px);`;
-          item.classList.toggle('fade');
-              setTimeout(() => {
-                  item.classList.toggle('fade');
-              }, 300);
-      })
-      circles.forEach(item => {
-          item.classList.toggle('modal__circle-active');
-          item.classList.toggle('fade');
-              setTimeout(() => {
-                  item.classList.toggle('fade');
-              }, 300);
-      });
-  }
-})
+function textChanging() {
+    sliderText.forEach(item => {
+        item.style = `transform: translateY(${positionOfText}px);`;
+        item.classList.toggle('fade');
+            setTimeout(() => {
+                item.classList.toggle('fade');
+            }, 300);
+    });
+
+    circles.forEach(item => {
+        item.classList.toggle('modal__circle-active');
+        item.classList.toggle('fade');
+            setTimeout(() => {
+                item.classList.toggle('fade');
+            }, 300);
+    });
+}
 
 export default modal;
 
