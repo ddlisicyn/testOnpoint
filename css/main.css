@@ -38,7 +38,7 @@ body {
     font-family: 'Gilroy';
 }
 
-main {
+.main {
     display: flex;
     flex-direction: row;
     width: 3072px;
@@ -47,26 +47,26 @@ main {
     background-size: cover;
 }
 
-header {
+.header {
     position: absolute;
     top: 3.5%;
     left: 2.5%;
     z-index: 1;
 }
 
-header img {
+.header img {
     width: 160px;
     height: 26px;  
 }
 
-footer {
+.footer {
     position: absolute;
     bottom: 2%;
     left: 2.5%;
     z-index: 3;
 }
 
-footer img {
+.footer img {
     width: 70px;
     height: 16px;
 }
