@@ -8,15 +8,14 @@ import './modules/modal';
 import './modules/third-slide';
 
 const header = document.querySelector('header'),
-        main = document.querySelector('main'),
-        width = document.querySelector('main').offsetWidth,
-        firstSlideButton = document.querySelector('.first-slide__button');
+      main = document.querySelector('main'),
+      width = document.querySelector('main').offsetWidth,
+      firstSlideButton = document.querySelector('.first-slide__button');
 
 let touchStartX = 0,
     touchPositionX = 0,
-    sensitivity = 60,
+    sensitivity = width / 32,
     positionOfMain = 0;
-
 
 header.addEventListener('click', () => {
   positionOfMain = 0;
@@ -66,7 +65,7 @@ function touchEndSwipe(e) {
 
 function nextSlide() {
     main.style = `transform: translateX(${positionOfMain}px);
-                     transition: .5s;`;
+                  transition: .5s;`;
 }
 
 function checkAction() {

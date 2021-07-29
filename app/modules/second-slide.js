@@ -21,6 +21,11 @@ scrollerButton.addEventListener('touchmove', function(e) {
     touchMoveScroller(e);
 });
 
+scrollerButton.addEventListener('touchend', function(e) {
+    e.stopPropagation();
+});
+
+
 function touchMoveScroller(e) {
     const offsetTop = document.getElementsByClassName('second-slide__scroll-line')[0].offsetTop,
           offsetTopText = document.getElementsByClassName('second-slide__description-information')[0].getElementsByTagName('p')[0].offsetTop,
