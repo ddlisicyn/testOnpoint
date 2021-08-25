@@ -564,6 +564,10 @@
   align-items: center;
   margin: 40px 0 0 30px;
 }
+.third-slide__button p {
+  font-size: 25px;
+  font-family: "DIN Pro Regular";
+}
 
 .third-slide__button-content {
   position: relative;
@@ -585,10 +589,6 @@
   content: "+";
   font-size: 30px;
   color: white;
-}
-.third-slide__button-content p {
-  font-size: 25px;
-  font-family: "DIN Pro Regular";
 }
 
 #blue-bubble-top {
