@@ -1,0 +1,32 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 3072px;
+    height: 768px;
+    background-image: url(../img/background.png);
+    background-size: cover;
+}
+
+.header {
+    position: absolute;
+    top: 3.5%;
+    left: 2.5%;
+    z-index: 1;
+
+    img {
+        width: 160px;
+        height: 26px;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 2%;
+    left: 2.5%;
+    z-index: 3;
+    
+    img {
+        width: 70px;
+        height: 16px;
+    }
+}

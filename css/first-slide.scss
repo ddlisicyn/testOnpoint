@@ -6,22 +6,22 @@
 .first-slide__descripton {
     margin: 14% 5% 2.5% 7%;
     text-transform: uppercase;
-}
 
-.first-slide__descripton p:first-child {
-    font-size: 30px;
-    font-family: 'DIN Pro';
-}
+    p:first-child {
+        font-size: 30px;
+        font-family: 'DIN Pro';
+    }
 
-.first-slide__descripton p:nth-of-type(2) {
-    font-size: 110px;
-    font-weight: 300;
-    letter-spacing: 5px;
-    line-height: 110px;
-}
+    p:nth-of-type(2) {
+        font-size: 110px;
+        font-weight: 300;
+        letter-spacing: 5px;
+        line-height: 110px;
+    }
 
-.first-slide__descripton span {
-    font-weight: 700;
+    span {
+        font-weight: 700;
+    }
 }
 
 .first-slide__descripton-with-button {
@@ -30,14 +30,14 @@
     align-items: center;
     justify-content: space-between;
     width: 850px;
-}
 
-.first-slide__descripton-with-button p:first-child {
-    font-size: 110px;
-    font-weight: 300;
-    letter-spacing: 5px;
-    line-height: 110px;
-    z-index: 1;
+    p:first-child {
+        font-size: 110px;
+        font-weight: 300;
+        letter-spacing: 5px;
+        line-height: 110px;
+        z-index: 1;
+    }
 }
 
 .first-slide__button {
@@ -48,6 +48,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    p {
+        font-size: 24px;
+        text-transform: none;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
 }
 
 .first-slide__button-arrow {
@@ -58,46 +65,39 @@
     background-color: black;
     border-radius: 50%;
     box-shadow: -3px -3px 5px 0px rgba(0, 0, 0, 0.3), 3px 3px 5px rgba(255, 255, 255, 0.6);
-}
 
-.first-slide__button-arrow div {
-    position: relative;
-    top: 24px;
-    width: 18px;
-    height: 2px;
-    background-color: white;
-    left: 16px;
-    display: block;
-}
+    div {
+        position: relative;
+        top: 24px;
+        width: 18px;
+        height: 2px;
+        background-color: white;
+        left: 16px;
+        display: block;
+    }
 
-.first-slide__button-arrow div::after {
-    content: '';
-    position: absolute;
-    width: 9px;
-    height: 2px;
-    top: -3px;
-    right: -2px;
-    background-color: white;
-    transform: rotate(45deg);
-}
+    div::after {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 2px;
+        top: -3px;
+        right: -2px;
+        background-color: white;
+        transform: rotate(45deg);
+    }
 
-.first-slide__button-arrow div::before {
-    content: '';
-    position: absolute;
-    width: 9px;
-    height: 2px;
-    top: 3px;
-    right: -2px;
-    background-color: white;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-    transform: rotate(-45deg);
-}
-
-.first-slide__button > p {
-    font-size: 24px;
-    text-transform: none;
-    font-weight: 400;
-    letter-spacing: 2px;
+    div::before {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 2px;
+        top: 3px;
+        right: -2px;
+        background-color: white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+        transform: rotate(-45deg);
+    }
 }
 
 #sperm-bottom {

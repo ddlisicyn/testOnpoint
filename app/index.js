@@ -1,8 +1,3 @@
-import '../css/main.css';
-import '../css/first-slide.css';
-import '../css/second-slide.css';
-import '../css/third-slide.css';
-import '../css/modal.css';
 import spermsRotation from './modules/second-slide';
 import './modules/modal';
 import './modules/third-slide';

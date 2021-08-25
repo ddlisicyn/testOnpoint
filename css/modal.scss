@@ -34,14 +34,21 @@
     margin: -18px 25px 0 0;
 }
 
-.modal__close-button .modal__leftright, 
-.modal__close-button .modal__rightleft  {
+%modal-close-button {
     height: 4px;
     width: 50px;
     position: absolute;
     margin-top: 24px;
     background-color: black;
     border-radius: 2px;
+}
+
+.modal__close-button .modal__leftright {
+    @extend %modal-close-button;
+} 
+
+.modal__close-button .modal__rightleft  {
+    @extend %modal-close-button;
 }
 
 .modal__close-button .modal__leftright {
@@ -57,18 +64,18 @@
     height: 250px;
     margin: -20px 50px 0 225px;
     overflow: hidden;
-}
 
-.modal__slider-text span {
-    color: #8cc9e8;
-    font-family: 'Gilroy';
-    font-weight: 700;
-    font-size: 22px;
-}
+    span {
+        color: #8cc9e8;
+        font-family: 'Gilroy';
+        font-weight: 700;
+        font-size: 22px;
+    }
 
-.modal__slider-text p {
-    font-family: 'DIN Pro Regular';
-    font-size: 24px;
+    p {
+        font-family: 'DIN Pro Regular';
+        font-size: 24px;
+    }
 }
 
 .modal__text-item {
@@ -81,13 +88,20 @@
     flex-direction: row;
 }
 
-.modal__prev-slide, 
-.modal__next-slide {
+%modal-nav {
     width: 8px;
     height: 8px;
     border-top: 2px solid black;
     border-right: 2px solid black;
     margin: 0 10px;
+}
+
+.modal__prev-slide {
+    @extend %modal-nav;
+} 
+
+.modal__next-slide {
+    @extend %modal-nav;
 }
 
 .modal__next-slide {
