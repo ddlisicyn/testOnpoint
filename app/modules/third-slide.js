@@ -1,11 +1,9 @@
 import modal from "./modal";
 
-const modalButton = document.querySelector('.third-slide__button'),
-      modalTitle = document.querySelector('.modal__title');
+const modalButton = document.querySelector('.third-slide__button');
+const modalTitle = document.querySelector('.modal__title');
 
-modalButton.addEventListener('click', () => {
-    closeAndShowModal();
-});
+modalButton.addEventListener('click', () => closeAndShowModal());
 
 function closeAndShowModal() {
     modal.classList.toggle('modal-hide');
