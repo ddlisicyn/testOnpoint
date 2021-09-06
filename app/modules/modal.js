@@ -1,17 +1,15 @@
 import closeAndShowModal from "./third-slide";
 
-const modal = document.querySelector('.modal'),
-      modalCloseButton = document.querySelector('.modal__close-button'),
-      prevText = document.querySelector('.modal__prev-slide'),
-      nextText = document.querySelector('.modal__next-slide'),
-      circles = document.querySelectorAll('.modal__circle'),
-      sliderText = document.querySelectorAll('.modal__text-item');
+const modal = document.querySelector('.modal');
+const modalCloseButton = document.querySelector('.modal__close-button');
+const prevText = document.querySelector('.modal__prev-slide');
+const nextText = document.querySelector('.modal__next-slide');
+const circles = document.querySelectorAll('.modal__circle');
+const sliderText = document.querySelectorAll('.modal__text-item');
 
 let positionOfText = 0;
 
-modalCloseButton.addEventListener('click', () => {
-    closeAndShowModal();
-});
+modalCloseButton.addEventListener('click', () => closeAndShowModal());
 
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
@@ -52,4 +50,3 @@ function textChanging() {
 }
 
 export default modal;
-

@@ -2,15 +2,15 @@ import spermsRotation from './modules/second-slide';
 import './modules/modal';
 import './modules/third-slide';
 
-const header = document.querySelector('header'),
-      main = document.querySelector('main'),
-      width = document.querySelector('main').offsetWidth,
-      firstSlideButton = document.querySelector('.first-slide__button');
+const header = document.querySelector('header');
+const main = document.querySelector('main');
+const width = document.querySelector('main').offsetWidth;
+const firstSlideButton = document.querySelector('.first-slide__button');
 
-let touchStartX = 0,
-    touchPositionX = 0,
-    sensitivity = width / 32,
-    positionOfMain = 0;
+let touchStartX = 0;
+let touchPositionX = 0;
+let sensitivity = width / 32;
+let positionOfMain = 0;
 
 header.addEventListener('click', () => {
   positionOfMain = 0;
@@ -23,25 +23,12 @@ firstSlideButton.addEventListener('click', () => {
     spermsRotation();
 });
 
-main.addEventListener('touchstart', function(e) {
-  touchStartSwipe(e);
-});
+main.addEventListener('touchstart', (e) => touchStartSwipe(e));
+main.addEventListener('touchmove', (e) => touchMoveSwipe(e));
+main.addEventListener('touchend', (e) => touchEndSwipe(e));
 
-main.addEventListener('touchmove', function(e) {
-  touchMoveSwipe(e);
-});
-
-main.addEventListener('touchend', function(e) {
-  touchEndSwipe(e);
-});
-
-function touchStartSwipe(e) {
-  touchStartX = e.changedTouches[0].clientX;
-}
-
-function touchMoveSwipe(e) {
-  touchPositionX = e.changedTouches[0].clientX;
-}
+const touchStartSwipe = (e) => touchStartX = e.changedTouches[0].clientX;
+const touchMoveSwipe = (e) => touchPositionX = e.changedTouches[0].clientX;
 
 function touchEndSwipe(e) {
     let resultOfAction = checkAction();
